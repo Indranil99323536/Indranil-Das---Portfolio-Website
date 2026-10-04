@@ -168,6 +168,17 @@ footer{padding-bottom:88px}
 .hl{padding:80px 0}
 }
 @media(hover:none){.sb::after{display:none}.sb:hover{transform:none}.btn:hover{transform:none}}
+.cert{width:100%;background:none;border:0;border-bottom:1px solid var(--line);color:inherit;font:inherit;text-align:left;cursor:pointer;align-items:center;transition:background .2s}
+.cert:last-child{border-bottom:0}
+.cert:hover .cv,.cert:focus-visible .cv{color:var(--acc)}
+.cert .ct{display:flex;flex-direction:column;gap:2px;flex:1;min-width:0}.cert .ct span{font-size:13px}
+.cert .cv{flex:none;font-size:13px;font-weight:600;color:var(--mut);white-space:nowrap}
+.cert img{flex:none;width:72px;height:auto;aspect-ratio:1.414;object-fit:cover;border-radius:6px;border:1px solid var(--line)}
+#cd{max-width:1000px;background:var(--card)}
+#cd .mb{padding:20px}#cd .ch{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}
+#cd h3{font-size:20px;margin:0}#cd .cs{font-size:13px;color:var(--mut)}
+#cd .ci2{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#fff}
+@media(max-width:640px){.cert img{width:56px}#cd .mb{padding:14px}#cd h3{font-size:16px}} 
 </style></head><body>
 <header id="hd"><div class="wrap nav"><a class="brand" href="#top">INDRANIL DAS</a><nav class="links" id="lk"></nav><div style="display:flex;gap:10px"><button class="ib" id="th" aria-label="Toggle color theme">◐</button><button class="ib burger" id="bg" aria-label="Open menu" aria-expanded="false">☰</button></div></div></header>
 <main>
