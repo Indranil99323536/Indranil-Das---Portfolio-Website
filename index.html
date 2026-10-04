@@ -127,8 +127,49 @@ footer{border-top:1px solid var(--line);padding:56px 0 48px}.fr{display:flex;jus
 .wa:hover{transform:scale(1.1)}.wa svg{width:28px;height:28px}
 .fr .soc{margin-top:14px}
 @media(prefers-reduced-motion:reduce){.sb,.ck .ki,.wa{transition:none}.sb:hover{transform:none}}
+
+.burger{display:none;place-items:center}
+.btn{touch-action:manipulation}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:6px}
+@media(max-width:860px){
+header.s{backdrop-filter:none;background:var(--bg)}
+.nav{position:relative;z-index:60}
+.burger{display:grid}
+.links{display:flex;position:fixed;inset:0;background:var(--bg);flex-direction:column;justify-content:center;gap:10px;padding:24px;opacity:0;visibility:hidden;transform:translateY(-12px);transition:.3s cubic-bezier(.22,1,.36,1)}
+.links.o{opacity:1;visibility:visible;transform:none}
+.links a.l{font-size:28px;color:var(--fg);padding:10px 12px}
+.links .btn{margin-top:14px;justify-content:center}
+}
+@media(max-width:640px){
+body{font-size:16px}
+.wrap{padding:0 18px}
+section{padding:72px 0}
+.hero{padding:104px 0 64px}
+h1{font-size:10.5vw}
+h2{margin-bottom:32px}
+.lead{margin:26px 0}
+.cta .btn{flex:1 1 100%;justify-content:center}
+.meta{gap:22px;margin-top:40px}
+.big{font-size:30px}
+.stats div,.cl>div{padding:20px 16px}
+.card{padding:22px}
+.tl{padding-left:26px}.job{padding:22px}.job::before{left:-26px}.job h3{font-size:21px}
+.pb{padding:22px}.vis{min-height:140px}
+.mb{padding:24px}.mb h3{font-size:24px}
+.band{padding:32px 22px;border-radius:16px}.band .btn{width:100%;justify-content:center;margin-bottom:10px}
+.band .cta{flex-direction:column}
+.pf{flex-direction:column;align-items:flex-start}.pf img{width:200px}
+.ci a.ck{min-height:60px}
+.sb{width:52px;height:52px}
+.wa{width:52px;height:52px;right:14px;bottom:14px}
+footer{padding-bottom:88px}
+.fr{flex-direction:column;gap:24px}
+.sl{grid-template-columns:1fr}
+.hl{padding:80px 0}
+}
+@media(hover:none){.sb::after{display:none}.sb:hover{transform:none}.btn:hover{transform:none}}
 </style></head><body>
-<header id="hd"><div class="wrap nav"><a class="brand" href="#top">INDRANIL DAS</a><nav class="links" id="lk"></nav><button class="ib" id="th" aria-label="Toggle color theme">◐</button></div></header>
+<header id="hd"><div class="wrap nav"><a class="brand" href="#top">INDRANIL DAS</a><nav class="links" id="lk"></nav><div style="display:flex;gap:10px"><button class="ib" id="th" aria-label="Toggle color theme">◐</button><button class="ib burger" id="bg" aria-label="Open menu" aria-expanded="false">☰</button></div></div></header>
 <main>
 <section class="hero" id="top"><div class="wrap hg"><div>
 <span class="pill"><i class="dot"></i>Open to new opportunities</span>
@@ -208,6 +249,12 @@ $('#ci').innerHTML=CT.map(c=>`<a class="ck" href="${c[3]}"${ext(c[3])} style="--
 const row=[CT[0],CT[1],CT[3],CT[4]].map(c=>`<a class="sb" data-t="${c[1]}" href="${c[3]}"${ext(c[3])} style="--k:${c[4]};--kf:${c[5]}" aria-label="${c[1]}: ${c[2]}">${svg(c[0])}</a>`).join('');
 $('#soc1').innerHTML=row;$('#soc2').innerHTML=row;
 document.body.insertAdjacentHTML('beforeend',`<a class="wa" href="${WA}" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">${svg('wa')}</a>`);
+
+const hd=$('#hd'),lk=$('#lk'),bg=$('#bg');
+bg.onclick=()=>{const o=lk.classList.toggle('o');bg.setAttribute('aria-expanded',o);bg.setAttribute('aria-label',o?'Close menu':'Open menu');bg.textContent=o?'✕':'☰';document.body.style.overflow=o?'hidden':''};
+lk.addEventListener('click',e=>{if(e.target.closest('a')&&lk.classList.contains('o'))bg.click()});
+addEventListener('keydown',e=>{if(e.key==='Escape'&&lk.classList.contains('o'))bg.click()});
+addEventListener('resize',()=>{if(innerWidth>860&&lk.classList.contains('o'))bg.click()});
 const v=(id,msg,ok)=>{$('#e'+id).textContent=ok?'':msg};
 $('#fm').addEventListener('submit',e=>{e.preventDefault();const n=$('#n').value.trim(),em=$('#e').value.trim(),s=$('#s').value.trim(),m=$('#m').value.trim();
 const a=n.length>1,b=/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em),c=s.length>2,d=m.length>9;
