@@ -109,7 +109,25 @@ input,textarea{width:100%;font:inherit;font-size:16px;padding:14px 16px;border-r
 footer{border-top:1px solid var(--line);padding:56px 0 48px}.fr{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}
 .fr nav{display:flex;gap:18px;flex-wrap:wrap;font-size:14px;color:var(--mut)}.cp{font-size:13px;color:var(--mut);margin-top:36px}
 @media(prefers-reduced-motion:reduce){h1 .ln span{animation:none;transform:none}html{scroll-behavior:auto}}
-.pf{margin:0 0 32px;display:flex;align-items:flex-end;gap:20px}.pf img{width:min(220px,48%);aspect-ratio:294/339;object-fit:cover;border-radius:14px;border:1px solid var(--line);box-shadow:var(--sh);display:block}.pf figcaption{font-size:14px;color:var(--mut);line-height:1.5;padding-bottom:6px}.pf figcaption b{display:block;color:var(--fg);font-size:18px;letter-spacing:-.02em}.pf figcaption i{display:block;font-style:normal;margin-top:10px;font-size:14px}.tr{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.tech{background:#fff;border:1px solid var(--line);border-radius:8px;padding:2px 8px;display:inline-flex;flex:none}.tech img{height:36px;width:auto;display:block}.mb .tech img{height:44px}</style></head><body>
+.pf{margin:0 0 32px;display:flex;align-items:flex-end;gap:20px}.pf img{width:min(220px,48%);aspect-ratio:294/339;object-fit:cover;border-radius:14px;border:1px solid var(--line);box-shadow:var(--sh);display:block}.pf figcaption{font-size:14px;color:var(--mut);line-height:1.5;padding-bottom:6px}.pf figcaption b{display:block;color:var(--fg);font-size:18px;letter-spacing:-.02em}.pf figcaption i{display:block;font-style:normal;margin-top:10px;font-size:14px}.tr{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.tech{background:#fff;border:1px solid var(--line);border-radius:8px;padding:2px 8px;display:inline-flex;flex:none}.tech img{height:36px;width:auto;display:block}.mb .tech img{height:44px}
+.soc{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+.sb{position:relative;width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--k);display:grid;place-items:center;box-shadow:var(--sh);transition:transform .25s,background .25s,color .25s,border-color .25s}
+.sb svg{width:22px;height:22px}
+.sb:hover,.sb:focus-visible{background:var(--k);color:var(--kf);border-color:var(--k);transform:translateY(-4px) scale(1.08);outline:none}
+.sb::after{content:attr(data-t);position:absolute;bottom:calc(100% + 10px);left:50%;transform:translate(-50%,4px);background:var(--fg);color:var(--bg);font-size:12px;font-weight:600;padding:5px 10px;border-radius:6px;white-space:nowrap;opacity:0;pointer-events:none;transition:.2s}
+.sb:hover::after,.sb:focus-visible::after{opacity:1;transform:translate(-50%,0)}
+.ci a.ck{flex-direction:row;align-items:center;gap:14px;padding:12px 14px;transition:transform .2s,border-color .2s;box-shadow:var(--sh)}
+.ci a.ck:hover,.ci a.ck:focus-visible{transform:translateY(-3px);border-color:var(--k);outline:none}
+.ck .ki{flex:none;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;color:var(--k);border:1px solid var(--line);transition:.25s}
+.ck .ki svg{width:22px;height:22px}
+.ck:hover .ki,.ck:focus-visible .ki{background:var(--k);color:var(--kf);border-color:var(--k);transform:rotate(-6deg) scale(1.06)}
+.ck .kt{display:flex;flex-direction:column;min-width:0;flex:1}.ck b{font-weight:600;overflow-wrap:anywhere}
+.ck .ka{flex:none;width:18px;height:18px;color:var(--mut);transition:.2s}.ck:hover .ka{transform:translate(3px,-3px);color:var(--k)}
+.wa{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:max(18px,env(safe-area-inset-bottom,0px));z-index:40;width:56px;height:56px;border-radius:50%;background:#128c7e;color:#fff;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.28);transition:transform .2s}
+.wa:hover{transform:scale(1.1)}.wa svg{width:28px;height:28px}
+.fr .soc{margin-top:14px}
+@media(prefers-reduced-motion:reduce){.sb,.ck .ki,.wa{transition:none}.sb:hover{transform:none}}
+</style></head><body>
 <header id="hd"><div class="wrap nav"><a class="brand" href="#top">INDRANIL DAS</a><nav class="links" id="lk"></nav><button class="ib" id="th" aria-label="Toggle color theme">◐</button></div></header>
 <main>
 <section class="hero" id="top"><div class="wrap hg"><div>
@@ -118,6 +136,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 48px}.fr{display:flex;jus
 <h1><span class="ln"><span>Creatio &amp; Pega</span></span><span class="ln"><span>Consultant</span></span></h1>
 <p class="lead">I design and deliver scalable BPM, CRM and workflow automation solutions for Banking, Insurance and Financial Services.</p>
 <div class="cta"><a class="btn" href="#projects">View My Work →</a><a class="btn g" href="#contact">Get in touch →</a><a class="btn g" href="resume.pdf" download="Indranil_Das_Resume.pdf">Download Resume ↓</a></div>
+<div class="soc" id="soc1" aria-label="Contact links"></div>
 <div class="meta"><div><b>5 Years</b><span>Experience</span></div><div><b>Creatio · Pega PRPC 8.7</b><span>BPM · CRM · Case Management</span></div><div><b>Banking · Insurance</b><span>Financial Services</span></div></div>
 </div>
 <aside class="tc" aria-label="Platforms"><span>Platforms</span>
@@ -141,10 +160,10 @@ footer{border-top:1px solid var(--line);padding:56px 0 48px}.fr{display:flex;jus
 <section id="certs"><div class="wrap"><span class="eyebrow">07 — Credentials</span><h2>Certifications</h2><div class="cg" id="cg"></div><p class="edu">Education: B.Tech in Electrical Engineering · University of Engineering and Management, Kolkata · 2017 – 2021</p></div></section>
 <section style="padding-top:0"><div class="wrap"><div class="band"><h2>Looking for a consultant who can turn complex business processes into scalable enterprise applications?</h2><div class="cta"><a class="btn" href="#contact">Contact Me →</a><a class="btn g" id="rd" href="resume.pdf" download="Indranil_Das_Resume.pdf">Download Resume ↓</a></div></div></div></section>
 <section id="contact" style="padding-top:40px"><div class="wrap"><div class="cf"><div><span class="eyebrow">08 — Contact</span><h2 style="margin-bottom:20px">Let's Work Together</h2><p class="mut" style="max-width:26em">Have a Creatio, Pega, BPM or workflow automation requirement? Let's connect.</p>
-<div class="ci"><a href="mailto:talktoneildas2@gmail.com"><small>Email</small>talktoneildas2@gmail.com</a><a href="tel:+917318721556"><small>Call</small>+91 7318721556</a><a href="tel:+919064469243"><small>Call</small>+91 9064469243</a><a href="https://wa.me/917318721556" target="_blank" rel="noopener noreferrer"><small>WhatsApp</small>Chat now · +91 7318721556</a><a href="https://www.linkedin.com/in/indranil-das-960073312/" target="_blank" rel="noopener noreferrer"><small>LinkedIn</small>indranil-das</a></div></div>
+<div class="ci" id="ci"></div></div>
 <form id="fm" novalidate><div><label for="n">Name</label><input id="n"><div class="err" id="en"></div></div><div><label for="e">Email</label><input id="e" type="email"><div class="err" id="ee"></div></div><div><label for="s">Subject</label><input id="s"><div class="err" id="es"></div></div><div><label for="m">Message</label><textarea id="m" rows="5"></textarea><div class="err" id="em"></div></div><button class="btn" type="submit">Send Message →</button><div class="st" id="st" role="status"></div></form></div></div></section>
 </main>
-<footer><div class="wrap"><div class="fr"><div><b style="letter-spacing:.12em;font-size:14px">INDRANIL DAS</b><p class="mut" style="margin:6px 0 0;font-size:15px">Creatio &amp; Pega Consultant</p></div><nav><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a><a href="#top">Back to top ↑</a></nav></div><p class="cp">© 2026 Indranil Das. All rights reserved.</p></div></footer>
+<footer><div class="wrap"><div class="fr"><div><b style="letter-spacing:.12em;font-size:14px">INDRANIL DAS</b><p class="mut" style="margin:6px 0 0;font-size:15px">Creatio &amp; Pega Consultant</p><div class="soc" id="soc2"></div></div><nav><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a><a href="#top">Back to top ↑</a></nav></div><p class="cp">© 2026 Indranil Das. All rights reserved.</p></div></footer>
 <dialog id="dl"><div class="mb" id="db"></div></dialog>
 <script>
 const $=s=>document.querySelector(s),E='talktoneildas2@gmail.com',ch=a=>a.map(x=>`<span class="chip">${x}</span>`).join('');
@@ -178,6 +197,17 @@ const C=[['Creatio',[['Certified Creatio Software Developer','Level: Advance'],[
 $('#cg').innerHTML=C.map(c=>`<div class="card"><h3 style="font-size:15px;color:var(--acc);margin-bottom:8px">${c[0]}</h3>${c[1].map(x=>`<div class="cert">${x[0]}<span>${x[1]}</span></div>`).join('')}</div>`).join('');
 addEventListener('scroll',()=>$('#hd').classList.toggle('s',scrollY>20),{passive:true});
 $('#th').onclick=()=>{const r=document.documentElement,d=matchMedia('(prefers-color-scheme:dark)').matches,cur=r.dataset.theme||(d?'dark':'light');r.dataset.theme=cur==='dark'?'light':'dark'};
+
+const IC={mail:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>',tel:'<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>',wa:'<path d="M3.5 20.5l1.3-4.4A8.5 8.5 0 1 1 8 19.3z"/><path d="M9 8.6c.3 2.9 2.5 5.2 5.6 6.2l1.2-1.4-2-1-.9.7c-.9-.4-1.7-1.2-2.1-2.1l.7-.9-1-2z"/>',li:'<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>'};
+const svg=(k,w)=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${w||1.8}" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${IC[k]}</svg>`;
+const WA='https://wa.me/917318721556?text=Hi%20Indranil%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect.';
+const CT=[['mail','Email','talktoneildas2@gmail.com','mailto:talktoneildas2@gmail.com','var(--acc)','var(--accfg)'],['tel','Call','+91 7318721556','tel:+917318721556','var(--acc)','var(--accfg)'],['tel','Call','+91 9064469243','tel:+919064469243','var(--acc)','var(--accfg)'],['wa','WhatsApp','Chat now · +91 7318721556',WA,'#128c7e','#fff'],['li','LinkedIn','indranil-das','https://www.linkedin.com/in/indranil-das-960073312/','#0a66c2','#fff']];
+const ext=h=>h.startsWith('http')?' target="_blank" rel="noopener noreferrer"':'';
+const arrow='<svg class="ka" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>';
+$('#ci').innerHTML=CT.map(c=>`<a class="ck" href="${c[3]}"${ext(c[3])} style="--k:${c[4]};--kf:${c[5]}" aria-label="${c[1]}: ${c[2]}"><span class="ki">${svg(c[0])}</span><span class="kt"><small>${c[1]}</small><b>${c[2]}</b></span>${arrow}</a>`).join('');
+const row=[CT[0],CT[1],CT[3],CT[4]].map(c=>`<a class="sb" data-t="${c[1]}" href="${c[3]}"${ext(c[3])} style="--k:${c[4]};--kf:${c[5]}" aria-label="${c[1]}: ${c[2]}">${svg(c[0])}</a>`).join('');
+$('#soc1').innerHTML=row;$('#soc2').innerHTML=row;
+document.body.insertAdjacentHTML('beforeend',`<a class="wa" href="${WA}" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">${svg('wa')}</a>`);
 const v=(id,msg,ok)=>{$('#e'+id).textContent=ok?'':msg};
 $('#fm').addEventListener('submit',e=>{e.preventDefault();const n=$('#n').value.trim(),em=$('#e').value.trim(),s=$('#s').value.trim(),m=$('#m').value.trim();
 const a=n.length>1,b=/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em),c=s.length>2,d=m.length>9;
