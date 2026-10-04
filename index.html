@@ -219,8 +219,8 @@ footer{padding-bottom:88px}
 <dialog id="dl"><div class="mb" id="db"></div></dialog>
 <dialog id="cd" aria-label="Certificate viewer"><div class="mb"><div class="ch"><div><h3 id="ctt"></h3><div class="cs" id="cts"></div></div><button class="ib" id="ccx" aria-label="Close certificate">✕</button></div><img class="ci2" id="cim" alt=""></div></dialog>
 <script>
-const $=s=>document.querySelector(s),E='talktoneildas2@gmail.com',ch=a=>a.map(x=>`<span class="chip">${x}</span>`).join('');
-const nav=[['about','About'],['expertise','Expertise'],['experience','Experience'],['projects','Projects'],['skills','Skills'],['testing','Testing'],['contact','Contact']];
+const $=s=>document.querySelector(s),E='talktoneildas2@gmail.com',ch=a=>a.map(x=>`<span class="chip">${x}</span>`).join('');  
+const nav=[['about','About'],['expertise','Expertise'],['experience','Experience'],['projects','Projects'],['skills','Skills'],['testing','Testing'],['certs','Certifications'],['contact','Contact']];  
 $('#lk').innerHTML=nav.map(n=>`<a class="l" href="#${n[0]}">${n[1]}</a>`).join('')+'<a class="btn sm" href="#contact">Let\'s Connect →</a>';
 const ex=[['Creatio Development','CRM configuration, Freedom UI customization, page design, data modeling, dashboards and reports.'],['Pega Development','Case types, flows, subflows, declarative and decision rules on Pega PRPC 8.7.'],['BPM & Workflow','Business process design and automated workflows that improve efficiency and reduce manual effort.'],['Case Management','Simple and complex case handling: underwriting, claims, FinCrime and customer onboarding, with SLAs.'],['API Integration','REST and SOAP APIs and web services connecting enterprise and mainframe systems.'],['Production Support','Debugging, query optimization, performance tuning and defect resolution.']];
 $('#ex').innerHTML=ex.map((c,i)=>`<article class="card"><div class="n">0${i+1}</div><h3>${c[0]}</h3><p>${c[1]}</p></article>`).join('');
